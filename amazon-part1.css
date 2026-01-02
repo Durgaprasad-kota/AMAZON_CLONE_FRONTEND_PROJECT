@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'popins', 'sans-serif';
+    font-family: sans-serif;
 }
 
 /* ------ search bar------ */
@@ -126,6 +126,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
     padding: 5px;
     gap: 0;
     background: #ffffff;
@@ -144,6 +145,7 @@
 #india {
     width: 75%;
     height: 100%;
+    cursor: pointer;
     caret-color: transparent;
     padding: 7px;
     border-radius: 3px;
@@ -198,7 +200,7 @@
     font-family: 'Arial', 'sans-serif';
 }
 
-.cart {
+#cart {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -210,7 +212,7 @@
     cursor: pointer;
 }
 
-.cart a {
+#cart a {
     font-size: 17px;
     color: #000;
     font-family: 'Arial', 'sans-serif';
@@ -228,6 +230,58 @@
 
 .sign:hover,
 .order:hover,
-.cart:hover {
-    background: #f4f1f1;
+#cart:hover {
+    background: #d5d3d3;
+}
+
+/* -----------  pop up message   ------------ */
+.popup{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    inset: 0;
+    background: rgb(0,0,0,.7);
+    z-index: 100000000;
+    transition: all .5s ease;
+}
+
+.mess-box{
+    width: 300px;
+    height: 250px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #ffffff;
+    border-radius: 10px;
+    gap: 20px;
+}
+#into{
+    position: absolute;
+    top: 15px;
+    font-size: 30px;
+    cursor: pointer;
+    right:15px ;
+}
+
+.u-cart h2 hr{
+    height: 4px;
+    width: 100%;
+    border-radius: 5px;
+    background: #ff0000;
+}
+
+#Item,#cost{
+    font-size: 16px;
+}
+.mess-box button{
+    width: 80%;
+    padding: 7px;
+    border-radius: 3px;
+    background: yellow;
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
 }
